@@ -197,3 +197,24 @@ h1.display-4 {
 }
 
 
+.square-card {
+    height: 300px; /* Ajusta el tamaño de la tarjeta */
+    width: 300px;  /* Haciendo la tarjeta cuadrada */
+    margin: 0 auto; /* Centra las tarjetas */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-text {
+    font-size: 1.2rem; /* Aumenta el tamaño de la descripción */
+}
+
+.btn {
+    margin-top: 15px;
+    font-size: 1.1rem; /* Ajusta el tamaño del botón */
+}
