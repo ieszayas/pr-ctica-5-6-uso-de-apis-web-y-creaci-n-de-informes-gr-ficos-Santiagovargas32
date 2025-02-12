@@ -112,96 +112,39 @@
             <!-- Left Column: Table -->
             <div class="col-md-8">
                 <h2 class="text-center my-4" id="listadoCoches">Listado de Coches</h2>
-                <!-- Campo de búsqueda -->
+
+                <!-- Campo de búsqueda para filtrar datos en la tabla -->
                 <div class="search-container">
                     <input type="text" id="searchInput" class="form-control form-control-sm search-input"
                         placeholder="Buscar...">
                 </div>
+
                 <br>
+
+                <!-- Spinner de carga con Bootstrap para mejorar la experiencia de usuario -->
+                <div id="loadingSpinner" class="text-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                    </div>
+                </div>
+
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>Modelo</th>
-                            <th>Año</th>
-                            <th>Tipo</th>
-                            <th>Precio</th>
+                            <!-- Mejora de accesibilidad con scope="col" en los encabezados -->
+                            <th scope="col">#</th>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">Año</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Precio</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Ford Mustang</td>
-                            <td>2022</td>
-                            <td>Deportivo</td>
-                            <td>$55,000</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Chevrolet Camaro</td>
-                            <td>2023</td>
-                            <td>Deportivo</td>
-                            <td>$50,000</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Toyota Corolla</td>
-                            <td>2021</td>
-                            <td>Sedán</td>
-                            <td>$20,000</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Honda Civic</td>
-                            <td>2022</td>
-                            <td>Sedán</td>
-                            <td>$25,000</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Jeep Wrangler</td>
-                            <td>2023</td>
-                            <td>SUV</td>
-                            <td>$40,000</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>BMW X5</td>
-                            <td>2022</td>
-                            <td>SUV</td>
-                            <td>$60,000</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Mercedes-Benz G-Class</td>
-                            <td>2023</td>
-                            <td>SUV</td>
-                            <td>$130,000</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>Ford F-150</td>
-                            <td>2022</td>
-                            <td>Pickup</td>
-                            <td>$35,000</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>Chevrolet Silverado</td>
-                            <td>2023</td>
-                            <td>Pickup</td>
-                            <td>$40,000</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>Porsche 911</td>
-                            <td>2022</td>
-                            <td>Deportivo</td>
-                            <td>$120,000</td>
-                        </tr>
+                    <tbody id="carTableBody">
+                        <!-- Contenedor dinámico donde se insertan las filas generadas con JavaScript -->
                     </tbody>
                 </table>
             </div>
+
 
             <!-- Right Column: Form -->
             <div class="col-md-4">
